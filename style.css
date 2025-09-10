@@ -6,7 +6,7 @@ header {
     align-items: center;;
     background-color: #1b354c;
     margin-bottom: 20px;
-    padding: 20px;
+    padding: 20px 20px 20px 0px;
     display: flex;
     justify-content: space-between;
     
