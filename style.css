@@ -19,7 +19,7 @@ header h1 {
 
 }
 
-.navigation ul div {
+.navigation ul {
     list-style-type: none;
     margin: 0px;
     padding: 0px;
@@ -28,15 +28,21 @@ header h1 {
     margin-right: 40px;    
 }
 
-.navigation ul div li a {
+.navigation a {
     color: #fcfefd;
     text-decoration: none;
     font-family: sans-serif, Arial;
-    font-size: 18px;
+    font-size: 20px;
+    display: block;
+    background-color: rgb(75, 88, 112);
+    padding: 7px 9px;
+    border-radius: 10px;
+    cursor: pointer;
 }
-.nav-links li {
-    background-color: rgb(40, 45, 68);
-    padding: 5px 20px;
+.navigation a:hover {
+    background-color: white;
+    color: #1b354c;
+    transition: 0.3s;
 }
 .content {
     max-width: 1200px;
