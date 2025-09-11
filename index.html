@@ -6,34 +6,43 @@
     <title>CleanCode</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <div class="name-logo">
-            <img src="JustLogo.png" alt="CleanCode Logo" class="logo">
-            <h1>CleanCode</h1>
+    <header class="site-header">
+        <div class="brand">
+            <img src="JustLogo.png" alt="CleanCode logo" class="logo">
+            <h1 class="site-title">CleanCode</h1>
         </div>
-        
+
         <nav class="navigation">
             <ul class="nav-links">
-                  
                 <li><a href="index.html">Home</a></li>
                 <li><a href="features.html">Features</a></li>
                 <li><a href="team.html">Team</a></li>
-                
-                
             </ul>
         </nav>
-            
     </header>
 
-    <div class="content">   
+     <div class="content">
         <main>
-            <section>
-                <h2>Welcome to CleanCode</h2>
-                <p>Instantly clean up your code with the power of Al. Enhance your formatting, remove redundancies, and optimize your code.</p>
+            <section class="hero">
+                <!--left side-->
+                <div class="hero-text">
+                    <h2>Transform <span class="red">messy</span> code into <br>
+                    <span class="blue">production-ready</span> code.
+                    </h2>
+                    <p>Drop your code in the box <strong>→</strong> get back a cleaner, optimized version in seconds.</p>
+                </div>
+                <!--right side-->
+                <div class="hero-code"> 
+                    <textarea placeholder="Paste your code here..."></textarea>
+                    <button class="button">Clean My Code</button>
+                </div>
             </section>
+                
         </main>
     </div>
+
 
 
 </body>
