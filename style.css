@@ -3,7 +3,9 @@ body {
     background-image: url(white-trianglify-opacity.png);
     background-size: cover;
     font-family: Arial, sans-serif;
-    margin: 0px;
+    margin: 0;
+    min-height: 100%;        /* allow background to extend */
+    overflow-x: hidden;      /* prevent sideways scroll */
 }
 
 .site-header {
@@ -11,53 +13,25 @@ body {
     align-items: center;
     justify-content: flex-start;
     background-color: #1b354c;
-    padding: 10px;
+    padding: 10px 40px;       /* consistent gutters */
     margin-bottom: 20px;
-    gap: 10px;                  /* space between Branding and Buttons */
+    gap: 10px;                /* space between Branding and Buttons */
     background: linear-gradient(90deg, #1b354c, #3d5775);
-    border-bottom: 2px solid #132235;       /* border line */
+    border-bottom: 2px solid #132235;  /* border line */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* shadow */
 }
 
 .site-title {
     color: #fcfefd;
-    margin: 0px;
-    font-family: sans-serif, Arial;
-
-}
-
-.navigation {
-  padding-left: 40px;  
-}
-
-.navigation .nav-links {
-  list-style: none;
-  margin: 0;
-  padding-left: 0px;  
-  display: flex;
-  gap: 24px;
-}
-
-/* Link styling */
-.navigation a {
-  color: #fcfefd;
-  text-decoration: none;
-  font-family: sans-serif, Arial;
-  display: block;
-  background: #56637a;     /*BUTTON COLOR*/
-  padding: 5px 10px;
-  border-radius: 10px;
-}
-.navigation a:hover {
-  background-color: #fff;
-  color: #1b354c;
-  transition: 0.3s;
+    margin: 0;
 }
 
 .logo {
+
+    display: block;
     height: 60px;
-    margin-left: 14px;
-    margin-top: -8px;
+    margin-left: px;
+    margin-top: 0;            /* let flex centering handle alignment */
 }
 
 .brand {
@@ -66,15 +40,38 @@ body {
     gap: 10px;
 }
 
-.content {
-    width: 100%;
-    max-width: none;
-    margin-top: 0;
-    padding: 0 40px;
-
+.navigation {
+  padding-left: 0;            /* remove double padding */
+  margin-left: 24px;          /* space from logo */
 }
 
+.navigation .nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;  
+  display: flex;
+  gap: 26px;
+  font-size: 20px;
+}
 
+/* Link styling */
+.navigation a {
+  color: #fcfefd;
+  text-decoration: none;
+  display: block;
+  padding: 5px 10px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.navigation a:hover {
+  background-color: #fff;
+  color: #1b354c;
+}
+
+.content {
+    width: 100%;
+    padding: 0 40px;           /* consistent page gutters */
+}
 
 .red {
   color: #e74c3c;
@@ -86,18 +83,16 @@ body {
   font-weight: bold;
 }
 
-
 .hero {
   display: flex;
   align-items: flex-start;
   gap: 32px;
-  padding-right: 40px;
+  padding-right: 50px;           /* use .content gutters instead */
 }
 
 .hero-text {
   flex: 0 0 50%;
-  max-width: none;
-  padding-left: 10%;
+  padding-left: 0;            /* remove 5% push */
   padding-top: 110px;
 }
 
@@ -114,34 +109,27 @@ body {
 }
 
 .hero-code {
-  /*background: #f4f4f4;
-  border: 1px solid #ddd;*/
-  flex: 1 1 60%;
+  flex: 1 1 50%;
   min-width: 0;
-
   margin-left: auto;
-  margin-right: 100px;
-
+  margin-right: 0;            /* remove big shove */
   max-width: 600px;
-
   border-radius: 5px;
-  font-family: 'Courier New', Courier, monospace;
   color: #333;
   overflow-x: auto;
 }
 
 .hero-code textarea {
-  margin-top: 120px;
+  margin-top: 110px;          /* match hero-text top */
   display: block;
-  width: 600px;
+  width: 100%;                /* fluid width */
+  max-width: 600px;           /* still capped */
   height: 400px;
   resize: none;
   box-sizing: border-box;
   border: #1b354c 3px solid;
   border-radius: 10px;
   font-size: 17px;
-  font-family: Arial, Helvetica, sans-serif;
-
 }
 
 .button {
@@ -154,4 +142,8 @@ body {
   border: none;
   border-radius: 8px;
   cursor: pointer;
+}
+
+.button:hover {
+  background-color: #3d5775;
 }
