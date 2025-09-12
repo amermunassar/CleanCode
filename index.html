@@ -1,85 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CleanCode</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CleanCode</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header class="site-header">
-        <div class="brand">
-            <img src="JustLogo.png" alt="CleanCode logo" class="logo">
-            <h1 class="site-title">CleanCode</h1>
+  <header class="site-header">
+    <div class="brand">
+      <img src="JustLogo.png" alt="CleanCode logo" class="logo">
+      <h1 class="site-title">CleanCode</h1>
+    </div>
+
+    <nav class="navigation">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="team.html">Team</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="content">
+    <main class="main">
+      <section class="hero">
+        <!-- left side -->
+        <div class="hero-text">
+          <h2>
+            Transform <span class="red">messy</span> code into <br>
+            <span class="blue">production-ready</span> code.
+          </h2>
+          <p>
+            Drop your code in the box <strong>→</strong> get back a cleaner,
+            optimized version in seconds.
+          </p>
         </div>
 
-        <nav class="navigation">
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="features.html">Features</a></li>
-                <li><a href="team.html">Team</a></li>
-            </ul>
-        </nav>
-    </header>
+        <!-- right side -->
+        <div class="hero-code"> 
+          <form class="action-form">
+            <!-- textarea on its own row -->
+            <textarea placeholder="Paste your code here..."></textarea>
 
-     <div class="content">
-        <main>
-            <section class="hero">
-                <!--left side-->
-                <div class="hero-text">
-                    <h2>Transform <span class="red">messy</span> code into <br>
-                    <span class="blue">production-ready</span> code.
-                    </h2>
-                    <p>Drop your code in the box <strong>→</strong> get back a cleaner, optimized version in seconds.</p>
-                </div>
-                <!--right side-->
-                <div class="hero-code"> 
-                    <div class="input-header">
-                        <div>
-                            <div id="code-help" class="input-help">Choose a task and hit <br><span id="clean-code-help">"Clean My Code"</span></div>
-                        </div>
-                        <form>
-                            <p>
-                                <label for="task-select"><span class="select-label">Select task:</span></label>
-                                <select id="task-select">
-                                    <button>
-                                        <selectedcontent></selectedcontent>
-                                    </button>
+            <!-- button and select together on the next row -->
+            <div class="action-row">
+              <label for="task-select" class="select-label">Select task:</label>
+              <select id="task-select">
+                
 
-                                    <option value="">Please select a task</option>
-                                    <option value="optimize">
-                                        <span class="icon" aria-hidden="true">⚡</span>
-                                        <span class="option-label">Optimize</span>
-                                    </option>
-                                    <option value="format">
-                                        <span class="icon" aria-hidden="true">✨</span>
-                                        <span class="option-label">Format</span>
-                                    </option>
-                                    <option value="debug">
-                                        <span class="icon" aria-hidden="true">🛠️</span>
-                                        <span class="option-label">Debug</span>
-                                    </option>
-                                    <option value="all">
-                                        <span class="icon" aria-hidden="true">⚙️</span>
-                                        <span class="option-label">All</span>
-                                    </option>
-                                </select>
-                            </p>
-                        </form>
+                <option value="">Please select a task</option>
+                <option value="optimize">
+                  <span class="icon" aria-hidden="true">⚡</span>
+                  <span class="option-label">Optimize</span>
+                </option>
+                <option value="format">
+                  <span class="icon" aria-hidden="true">✨</span>
+                  <span class="option-label">Format</span>
+                </option>
+                <option value="debug">
+                  <span class="icon" aria-hidden="true">🛠️</span>
+                  <span class="option-label">Debug</span>
+                </option>
+                <option value="all">
+                  <span class="icon" aria-hidden="true">⚙️</span>
+                  <span class="option-label">All</span>
+                </option>
+              </select>
 
-                    </div>
-                    <textarea placeholder="Paste your code here..."></textarea>
-                    <button class="button">Clean My Code</button>
-                </div>
-            </section>
-        </main>
-    </div>
-    
-
-
+              <button class="button" type="submit">Clean My Code</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
