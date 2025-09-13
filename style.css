@@ -11,15 +11,15 @@
 body {
   background-color: #fcfcfb;
   background-image: url(trianglify-lowres.png);
-  background-repeat: repeat-y;      /* tile vertically */
-  background-size: 1500px auto;            /* don't scale to cover */
-  background-position: top center;  /* start at the top */
-  /* optional: background-attachment: fixed;  parallax feel */
+  background-repeat: repeat-y;   /* still tiles vertically */
+  background-size: 100% auto;    /* stretch image width to device width */
+  background-position: top center;
   font-family: Arial, sans-serif;
   margin: 0;
   min-height: 100%;
   overflow-x: hidden;
 }
+
 
 /* ============================= */
 /* Header + Navigation           */
