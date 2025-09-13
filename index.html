@@ -36,25 +36,28 @@
             Transform <span class="red">messy</span> code into <br>
             <span class="blue">production-ready</span> code.
           </h2>
-          <p>
-            Drop your code in the box <strong>→</strong> get back a cleaner,
-            optimized version in seconds.
-          </p>
+          <p>Drop your code in the box and let AI do the hard work.</p>
+          <div class="hero-features">
+            <div>⚡ Smarter optimization</div>
+            <div>✨ Instant formatting</div>
+            <div>🛠️ Debug assistance</div>
+          </div>
         </div>
 
         <!-- right side -->
         <div class="hero-code"> 
           <form class="action-form">
-            <!-- textarea on its own row -->
-            <textarea placeholder="Paste your code here..."></textarea>
+            <!-- header and textarea -->
+            <div class="form-header">
+              <h2>Paste your <span class="red">messy</span> code</h2>
+            </div>
+            <textarea placeholder=" console.log(&quot;Drop your code here&quot;);"></textarea>
 
             <!-- button and select together on the next row -->
             <div class="action-row">
               <label for="task-select" class="select-label">Select task:</label>
               <select id="task-select">
-                
-
-                <option value="">Please select a task</option>
+                <option value="none">None</option>
                 <option value="optimize">
                   <span class="icon" aria-hidden="true">⚡</span>
                   <span class="option-label">Optimize</span>
@@ -76,6 +79,29 @@
               <button class="button" type="submit">Clean My Code</button>
             </div>
           </form>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section>
+        <h2 class="section-title">Why Choose CleanCode?</h2>
+        <div class="features">
+          <div class="feature">
+            <img src="ai icon.png" alt="AI Icon" class="ai-icon">
+            <h3>AI-Powered</h3>
+            <p>Leverage cutting-edge AI to transform your code efficiently.</p>
+          </div>
+          <div class="feature">
+            <img src="speed icon.png" alt="Speed Icon" class="speed-icon">
+            <h3>Fast & Reliable</h3>
+            <p>Get instant results without compromising on quality.</p>
+          </div>
+          <div class="feature">
+            <img src="user friendly icon.png" alt="User Friendly Icon" class="user-friendly-icon">
+            <h3>User-Friendly</h3>
+            <p>Intuitive interface designed for developers of all levels.</p>
+          </div>
         </div>
       </section>
     </main>

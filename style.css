@@ -10,12 +10,15 @@
 /* Whole page background, font, layout */
 body {
   background-color: #fcfcfb;
-  background-image: url(white-trianglify-opacity.png);
-  background-size: cover;
+  background-image: url(trianglify-lowres.png);
+  background-repeat: repeat-y;      /* tile vertically */
+  background-size: 1500px auto;            /* don't scale to cover */
+  background-position: top center;  /* start at the top */
+  /* optional: background-attachment: fixed;  parallax feel */
   font-family: Arial, sans-serif;
   margin: 0;
   min-height: 100%;
-  overflow-x: hidden; /* prevent sideways scroll */
+  overflow-x: hidden;
 }
 
 /* ============================= */
@@ -119,13 +122,13 @@ header {
 /* Left column (headline + text) */
 .hero-text {
   flex: 0 0 50%;
-  padding-top: 150px; /* space for fixed header */
+  padding-top: 100px; /* space for fixed header */
    text-align: center;
 }
 
 /* Hero headline */
 .hero-text h2 {
-  font-size: 3.1em;
+  font-size: 3.0em;
   line-height: 1.2;
   color: #3b3b3b;
   margin: 0;
@@ -140,7 +143,7 @@ header {
 
 /* Right column (textarea + dropdown) */
 .hero-code {
-  padding-top: 110px; /* space for fixed header */
+  padding-top: 50px; /* space for fixed header */
   flex: 1 1 50%;
   max-width: 600px;
   border-radius: 5px;
@@ -164,12 +167,20 @@ header {
 /* Code input textarea */
 .action-form textarea {
   width: 100%;
-  height: 500px;
+  height: 400px;
   resize: none;
-  border: 3px solid #1b354c;
+  border: 2px solid #ddd;
   border-radius: 10px;
   font-size: 17px;
 }
+
+textarea::placeholder {
+  color: #888;
+  font-style: italic;
+  font-size: 0.95em;
+  opacity: 1;
+}
+
 
 /* Row with dropdown + button */
 .action-row {
@@ -193,6 +204,139 @@ header {
 .button:hover {
   background-color: #3d5775;
 }
+
+.hero-features {
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 30px;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+.hero-features div:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.hero-features div {
+  background: #f9f9f9;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  flex: 1;
+  text-align: center;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+
+}
+
+.form-header h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #3b3b3b;
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #1b354c;      /* match your brand navy */
+  margin-bottom: 0px;
+
+  }
+
+/* Section wrapper */
+section {
+  padding: 80px 40px;
+  text-align: center;
+}
+
+/* Section heading */
+.section-title {
+  font-size: 2.2em;
+  font-weight: bold;
+  color: #1b354c;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #1b354c, #3d5775);
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* Feature container (3-column layout) */
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap; /* keeps it responsive */
+}
+
+/* Individual feature card */
+.feature {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  flex: 1 1 250px;   /* grows but has a min width */
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for feature card */
+.feature:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+/* Icon above each feature */
+.feature-icon {
+  width: 60px;
+  margin-bottom: 20px;
+}
+
+/* Feature title */
+.feature h3 {
+  font-size: 1.4em;
+  color: #1b354c;
+  margin-bottom: 12px;
+}
+
+/* Feature description */
+.feature p {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.5;
+}
+
+.section-divider{
+  height: 20px;
+  margin: 60px auto 40px;
+  max-width: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg,#1b354c,#3d5775);
+  box-shadow: 0 4px 10px rgba(0,0,0,.08);
+}
+
+.ai-icon {
+  width: 80px;
+  margin-top: 10px;
+}
+
+.speed-icon {
+  width: 90px;
+  margin-top: 10px;
+}
+
+.user-friendly-icon {
+  width: 60px;
+  margin-top: 10px;
+}
+
+
 
 /* ============================= */
 /* Select Dropdown + Options     */
