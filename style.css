@@ -658,3 +658,10 @@ option::checkmark {
   box-shadow: 0 0 8px rgba(107, 107, 107, 0.45);
   
 }
+
+
+/* Targets only the textarea when it has the error class */
+textarea.error {
+  border: 2px solid red;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
