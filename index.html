@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CleanCode</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="normalize.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Main JS -->
+  <script src="main.js" defer></script>
+</head>
+
+<body>
+  <!-- Top navigation / branding -->
+  <header class="site-header">
+    <div class="brand">
+      <img src="JustLogo.png" alt="CleanCode logo" class="logo">
+      <h1 class="site-title">CleanCode</h1>
+    </div>
+
+    <nav class="navigation">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="team.html">Team</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="content">
+    <main class="main">
+      <!-- Hero section: tagline + features + code tool -->
+      <section class="hero">
+        <!-- Left side: text + feature bullets -->
+        <div class="hero-text">
+          <h2>
+            Transform <span class="red">messy</span> code into <br>
+            <span class="blue">production-ready</span> code.
+          </h2>
+          <p>Drop your code in the box and let AI do the hard work.</p>
+
+          <div class="hero-features">
+  <div class="hero-feature-single">
+    <span class="feature-title">✨ AI-Powered Code Cleanup</span>
+    <p class="feature-description">
+      Smarter optimization, instant formatting, and built-in debugging
+      all handled automatically so you can focus on building, not fixing.
+    </p>
+  </div>
+</div>
+
+        </div>
+
+        <!-- Right side: input + output code panels -->
+        <div class="code-panels">
+          <!-- LEFT: input panel -->
+          <div class="hero-code-card">
+            <div class="hero-code">
+              <form class="action-form" id="clean-form">
+                <div class="form-header">
+                  <h2>Paste your <span class="blue">code</span> below</h2>
+                </div>
+
+                <textarea
+                  id="code-input"
+                  class="code-box"
+                  placeholder="console.log(&quot;Drop your code here&quot;);"
+                ></textarea>
+
+                <div class="action-row">
+                  <label for="task-select" class="select-label">Select task:</label>
+                  <select id="task-select">
+                    <option value="none">None</option>
+                    <option value="optimize">⚡ Optimize</option>
+                    <option value="format">✨ Format</option>
+                    <option value="debug">🛠️ Debug</option>
+                    <option value="all">⚙️ All</option>
+                  </select>
+
+                  <button class="button" type="submit" id="clean-button">
+                    Clean My Code
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- RIGHT: output panel (read-only) -->
+          <div class="hero-code-card">
+            <div class="hero-code">
+              <h2>AI Cleaned Code</h2>
+              <textarea
+                id="output"
+                class="code-box"
+                readonly
+                placeholder="Your cleaned code will appear here..."
+              ></textarea>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Logo bar/divider -->
+      <div class="logo-bar">
+        <img src="ai icon.png" alt="AI">
+        <img src="speed icon.png" alt="Fast">
+        <img src="user friendly icon.png" alt="User Friendly">
+        <img src="ai icon.png" alt="AI">
+        <img src="speed icon.png" alt="Fast">
+        <img src="user friendly icon.png" alt="User Friendly">
+        <img src="ai icon.png" alt="AI">
+        <img src="speed icon.png" alt="Fast">
+        <img src="user friendly icon.png" alt="User Friendly">
+        <img src="ai icon.png" alt="AI">
+        <img src="speed icon.png" alt="Fast">
+        <img src="user friendly icon.png" alt="User Friendly">
+        <img src="ai icon.png" alt="AI">
+        <img src="speed icon.png" alt="Fast">
+        <img src="user friendly icon.png" alt="User Friendly">
+        <img src="ai icon.png" alt="AI">
+        <img src="speed icon.png" alt="Fast">
+        <img src="user friendly icon.png" alt="User Friendly">
+        <!-- repeat as needed -->
+      </div>
+<section class="feature2" id="features">
+  <div class="feature2-container">
+
+    <!-- LEFT SIDE: big descriptive text -->
+    <div class="feature2-text">
+      <h2>Powerful AI Features Built Into CleanCode</h2>
+      <p>
+        CleanCode transforms messy code into polished, production-ready quality.
+        It intelligently optimizes, formats, and highlights issues in your code,
+        so you can focus on building instead of fixing.
+      </p>
+
+      <ul class="feature2-list">
+        <li><strong>Optimization</strong> — Improve performance and efficiency.</li>
+        <li><strong>Formatting</strong> — Enforce clean, readable structure.</li>
+        <li><strong>Debugging</strong> — Surface common issues before they break things.</li>
+      </ul>
+    </div>
+
+    <div class="feature2-visual feature2-visual-code">
+  <div class="code-window">
+    <div class="code-window-header">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+      <span class="code-window-title">cleancode_features.md</span>
+    </div>
+
+    <pre class="code-window-body"><code>
+# CleanCode Features
+
+• Optimizes structure  
+• Formats instantly  
+• Highlights errors  
+• Improves readability  
+
+Simple tools. Better code.
+    </code></pre>
+  </div>
+</div>
+
+    
+  </div>
+</section>
+      <!-- Before/After screenshot section -->
+      <section class="before-after">
+        <h2 class="section-title">See the Difference</h2>
+        <p class="section-subtitle">Messy code in, polished code out.</p>
+
+        <div class="code-compare">
+          <div class="code-block-before">
+            <div class="code-label-before">Before</div>
+            <img
+              src="before_code_padded.png"
+              alt="Before code example"
+              id="before-image"
+            >
+          </div>
+
+          <div class="code-block-after">
+            <div class="code-label-after">After</div>
+            <img
+              src="after_code_padded.png"
+              alt="After code example"
+              id="after-image"
+            >
+          </div>
+        </div>
+      </section>
+
+      <!--Feature Description-->
+      
+
+
+      <!-- Why Choose Section -->
+      <section class="why-choose">
+        <h2 class="section-title">
+          Why Choose <span class="brand-blue">CleanCode?</span>
+        </h2>
+        <div class="features">
+          <div class="feature">
+            <img src="ai icon.png" alt="AI Icon" class="ai-icon">
+            <h3>AI-Powered</h3>
+            <p>Leverage cutting-edge AI to transform your code efficiently.</p>
+          </div>
+          <div class="feature">
+            <img src="speed icon.png" alt="Speed Icon" class="speed-icon">
+            <h3>Fast & Reliable</h3>
+            <p>Get instant results without compromising on quality.</p>
+          </div>
+          <div class="feature">
+            <img
+              src="user friendly icon.png"
+              alt="User Friendly Icon"
+              class="user-friendly-icon"
+            >
+            <h3>User-Friendly</h3>
+            <p>Intuitive interface designed for developers of all levels.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p id="footer-text">&copy; 2024 CleanCode. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
