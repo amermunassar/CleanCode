@@ -21,7 +21,7 @@ const taskSelect = document.getElementById("task-select");
 const output = document.getElementById("output");
 
 // While testing locally on Windows, your backend URL is:
-const BACKEND_URL = "https://clean-code-c4mn.onrender.com/"; // change later when you deploy
+const BACKEND_URL = "https://clean-code-c4mn.onrender.com/api/clean"; // change later when you deploy
 
 form.addEventListener("submit", async (event) => {
   event.preventDefault(); // stop page from refreshing
