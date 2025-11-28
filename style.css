@@ -119,7 +119,7 @@ header {
   width: 100%;
   min-height: 100vh;
   padding: 0;
-  background-image: url(output-onlinepngtools.png);
+  background-image: url(pics/output-onlinepngtools.png);
   background-size: cover;       /* fill screen, crop edges if needed */
   background-position: center;  /* center the image */
   background-repeat: no-repeat;
