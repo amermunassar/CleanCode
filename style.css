@@ -830,3 +830,157 @@ textarea.error {
   line-height: 1.5;
   white-space: pre;
 }
+
+/* ============================= */
+/* Responsive tweaks             */
+/* ============================= */
+
+/* Medium screens (tablets / small laptops) */
+@media (max-width: 1024px) {
+  .site-header {
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    gap: 16px;
+    font-size: 16px;
+    flex-wrap: wrap;
+  }
+
+  .hero {
+    padding-right: 40px;
+  }
+
+  .code-panels {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .feature2 {
+    padding: 160px 20px;
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 768px) {
+  /* Stack hero columns instead of side-by-side */
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: auto;
+    padding: 120px 16px 40px; /* space below header */
+    background-position: top;
+    padding-right: 16px;
+  }
+
+  .hero-text {
+    flex: 1 1 auto;
+    margin-top: 40px;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .hero-text h2 {
+    font-size: 2.1em;
+  }
+
+  .hero-text p {
+    font-size: 1.05em;
+  }
+
+  .hero-code-card {
+    margin-top: 24px;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+  }
+
+  .code-panels {
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 16px;
+  }
+
+  #code-input,
+  #output {
+    height: 260px !important;
+    min-height: 260px !important;
+  }
+
+  .hero-features div,
+  .hero-feature-single {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .features {
+    gap: 24px;
+  }
+
+  section,
+  .before-after,
+  .why-choose {
+    padding: 60px 16px;
+  }
+
+  .logo-bar {
+    flex-wrap: wrap;
+    gap: 24px;
+    height: auto;
+    padding: 16px 0;
+  }
+
+  /* Stop before/after cards from flying off-screen on hover */
+  .code-block-before,
+  .code-block-after {
+    width: 100%;
+  }
+
+  .code-block-before:hover,
+  .code-block-after:hover {
+    transform: none;
+  }
+
+  .feature2 {
+    padding: 140px 16px 60px;
+  }
+
+  .feature2-container {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .feature2-text h2 {
+    font-size: 2.1rem;
+  }
+
+  .feature2-text p {
+    font-size: 1rem;
+  }
+}
+
+/* Extra small screens / very narrow devices */
+@media (max-width: 480px) {
+  .site-header {
+    padding: 8px 12px;
+  }
+
+  .nav-links {
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .logo {
+    height: 48px;
+    transform: translate(0, 0);
+  }
+
+  .hero-text h2 {
+    font-size: 1.8em;
+  }
+
+  .section-title {
+    font-size: 1.6em;
+  }
+}
