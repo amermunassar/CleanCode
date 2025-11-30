@@ -10,7 +10,9 @@
 
 html {
   scroll-padding-top: var(--header-h);
+  scroll-behavior: smooth; /* add this */
 }
+
 
 body {
   background-color: #fcfcfb;
