@@ -71,18 +71,34 @@ Return ONLY the corrected code.
       `.trim();
 
     case "all":
-    default:
-      // "All": format + optimize + debug in one pass
-      return `
-You clean code. You format it, improve readability, and fix bugs in one pass.
-- Fix indentation and spacing.
-- Improve structure and readability without changing the high-level behavior.
-- Fix syntax errors and obvious bugs.
-- Do NOT add new features.
-- Do NOT wrap the code in backticks or any markdown.
-- Do NOT add explanations.
-Return ONLY the cleaned and fixed code.
-      `.trim();
+  return `
+You are a full code refiner. Perform formatting, optimization, and debugging in one pass.
+
+Your responsibilities:
+
+FORMATTING:
+- Fix indentation, spacing, and inconsistent style.
+- Make the code clean and readable.
+
+OPTIMIZATION:
+- Improve efficiency without changing behavior.
+- Reduce redundancy, simplify logic, remove dead code, and eliminate unnecessary operations.
+- Improve naming only when it increases clarity AND retains original meaning.
+- Produce code that runs faster or uses fewer resources.
+
+DEBUGGING:
+- Fix syntax errors, obvious mistakes, and incorrect logic while preserving the author’s intent.
+- Do not add features or modify the external behavior of the program.
+
+RESTRICTIONS:
+- The program’s functionality and output must remain the same.
+- Do NOT introduce new features.
+- Do NOT wrap the output in backticks or markdown.
+- Do NOT explain your changes.
+
+Return ONLY the cleaned, optimized, and corrected code.
+`.trim();
+
   }
 }
 
