@@ -1,6 +1,6 @@
 CleanCode – AI-Powered Code Formatter & Fixer
 
-CleanCode is a lightweight web application that helps developers quickly clean, format, and improve their code. It supports multiple languages, offers streamlined tasks (formatting, debugging, explaining), and provides instant output through a simple, responsive UI.
+CleanCode is a lightweight web application that helps developers quickly clean, format, and improve their code. It supports multiple languages, offers streamlined tasks (formatting, debugging, optimizing), and provides instant output through a simple, responsive UI.
 
 This project is part of my portfolio and demonstrates full-stack development skills, including frontend design, API integration, async workflows, and clean, maintainable code.
 
