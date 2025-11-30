@@ -1,63 +1,60 @@
-const textarea = document.querySelector('.action-form textarea');
-const button = document.querySelector('.button');
-
-button.addEventListener('click', () => { //checks for empty textarea on button click
-    if(textarea.value.trim() === '') {
-        textarea.classList.add('error');
-        setTimeout(() => {
-            textarea.classList.remove('error');
-            
-        }, 2000); // Remove error class after 2 seconds
-
-    } else {
-        textarea.classList.remove('error');
-    }
-});
-
-// Grab elements from your existing HTML
 const form = document.getElementById("clean-form");
 const codeInput = document.getElementById("code-input");
 const taskSelect = document.getElementById("task-select");
 const output = document.getElementById("output");
+const button = document.getElementById("clean-button");
 
-// While testing locally on Windows, your backend URL is:
-const BACKEND_URL = "https://clean-code-c4mn.onrender.com"; // change later when you deploy
+// Backend endpoint URL
+const BACKEND_URL = "https://clean-code-c4mn.onrender.com/api/clean";
 
+// Handle form submission: user clicks "Clean My Code"
 form.addEventListener("submit", async (event) => {
-  event.preventDefault(); // stop page from refreshing
+  event.preventDefault(); // prevent page refresh
 
-  const code = codeInput.value;
+  // Get code from textarea
+  const code = codeInput.value.trim();
+  // Get selected task: "optimize", "format", "debug", or "all"
   const task = taskSelect.value;
 
-  if (!code.trim()) {
-    output.textContent = "Please paste some code first.";
+  // If code is empty, show quick error highlight and stop
+  if (!code) {
+    codeInput.classList.add("error");
+    setTimeout(() => codeInput.classList.remove("error"), 1500);
     return;
   }
 
-  // Show loading text
-  output.textContent = "Cleaning your code with AI...";
+  // UI: show loading state on button + output
+  button.disabled = true;
+  const originalText = button.textContent;
+  button.textContent = "Cleaning...";
+  output.value = "Processing your code...";
 
   try {
-    const response = await fetch(`${BACKEND_URL}/api/clean`, {
+    // Send POST request to backend with code + task as JSON
+    const response = await fetch(BACKEND_URL, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      // we send both code and task; backend can use task as a hint
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ code, task }),
     });
 
-    const data = await response.json();
-
     if (!response.ok) {
-      output.textContent = data.error || "Server error occurred.";
+      // If server responded with 4xx / 5xx
+      output.value = "Server error. Please try again.";
       return;
     }
 
-    output.textContent = data.cleanedCode;
-  } catch (error) {
-    console.error(error);
-    output.textContent =
-      "Could not reach the CleanCode server. Is it running on port 3000?";
+    // Parse JSON response from backend: { cleanedCode: "..." }
+    const data = await response.json();
+
+    // Place cleaned code into the "AI Cleaned Code" textarea
+    output.value = data.cleanedCode || "No cleaned code returned.";
+  } catch (err) {
+    // Network or fetch error
+    console.error("Network error:", err);
+    output.value = "Network error. Please try again.";
+  } finally {
+    // Restore button to normal state
+    button.disabled = false;
+    button.textContent = originalText;
   }
 });
