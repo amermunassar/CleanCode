@@ -118,25 +118,25 @@ header {
 .hero {
   width: 100%;
   min-height: 100vh;
-  padding: 0;
+  padding: 0 40px; /* balanced left/right */
   background-image: url(pics/output-onlinepngtools.png);
-  background-size: cover;       /* fill screen, crop edges if needed */
-  background-position: center;  /* center the image */
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   display: flex;
   align-items: flex-start;
   gap: 32px;
-  padding-left: 0px;    /* text from left edge */
-  padding-right: 120px; /* code from right edge */
 }
+
 
 /* Left column (headline + text) */
 .hero-text {
-  flex: 0 0 50%;
+  flex: 0 0 40%;  /* was 50% */
   margin-top: 220px;
   padding-left: 40px;
   text-align: center;
 }
+
 
 /* Hero headline */
 .hero-text h2 {
@@ -154,16 +154,18 @@ header {
 }
 
 /* Right column (textarea + dropdown) */
+/* Right column (textarea + dropdown) */
 .hero-code {
   padding-right: 15px;
-  flex: 1 1 50%;
-  max-width: 600px;
+  flex: 1 1 100%;
+  max-width: 100%; /* let it use full space of the card */
   border-radius: 5px;
   color: #333;
   overflow-x: auto;
   margin-left: 0;
   overflow: visible; /* allow dropdown to extend outside */
 }
+
 
 /* ============================= */
 /* Action Form (textarea + row)  */
@@ -628,7 +630,7 @@ option::checkmark {
 
 .hero-code-card {
   flex: 1 1 50%;
-  max-width: 600px;
+  max-width: 800px;
   background: rgba(255, 255, 255, 0.8);
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(124, 124, 124, 0.1);
@@ -680,22 +682,25 @@ textarea.error {
 
 .code-panels {
   display: flex;
-  gap: 20px;
-  align-items: flex-start;
+  gap: 40px;
+  align-items: stretch;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1500px; /* was 1400 — gives more breathing room */
+  padding: 0 20px;
   margin: 0 auto;
 }
+
 
 .code-panels > * {
   flex: 1;
 }
 
 .code-panels > .hero-code-card {
-  flex: 1 1 50%;
-  min-width: 0;
+  flex: 1 1 100%;
+  min-width: 400px;
   min-height: 350px;
 }
+
 
 /* Shared class for both textareas (input + output) */
 .code-box {
@@ -712,8 +717,10 @@ textarea.error {
   height: 500px !important;
   min-height: 500px !important;
   width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
 }
+
 
 .hero-feature-single {
   width: 500px;
@@ -983,4 +990,126 @@ textarea.error {
   .section-title {
     font-size: 1.6em;
   }
+}
+
+.output-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.output-header h2 {
+  display: inline-block;
+  text-align: center;
+  margin: 11px 40px 20px;
+  padding-left: 50px;
+  font-size: 2.25em;
+  font-weight: bold;
+  color: #3b3b3b;
+}
+
+.copy-button {
+  padding: 6px 14px;
+  background: linear-gradient(90deg, #1e608b, #3d5775);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.copy-button:hover {
+  transform: scale(1.05);
+  background: #3d5775;
+}
+
+/* ========================================== */
+/* Compact Glass Languages Card (Hero)        */
+/* ========================================== */
+
+.lang-card-mini {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 0px;
+  margin-bottom: 4px;
+}
+
+.lang-card-inner-mini {
+  max-width: 720px;
+  width: 100%;
+  padding: 14px 18px 14px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.6), rgba(235,241,248,0.4));
+  box-shadow:
+    0 8px 18px rgba(15, 23, 42, 0.10),
+    0 0 0 1px rgba(148, 163, 184, 0.25);
+  text-align: center;
+}
+
+.lang-mini-eyebrow {
+  margin: 0 0 10px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #1b354c;
+  opacity: 0.9;
+}
+
+/* Smaller badges */
+
+.lang-mini-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.lang-mini-badge {
+  font-size: 0.78rem;
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(27, 53, 76, 0.30);
+  background: radial-gradient(circle at top left, #ffffff, #ecf1f7);
+  color: #1b354c;
+  font-weight: 500;
+  white-space: nowrap;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.08);
+  transition:
+    transform 0.15s ease-out,
+    box-shadow 0.15s ease-out,
+    border-color 0.15s ease-out;
+}
+
+.lang-mini-badge:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(15, 23, 42, 0.18);
+  border-color: rgba(27, 53, 76, 0.5);
+}
+
+.lang-mini-accent {
+  border-color: #2563eb;
+  background: radial-gradient(circle at top left, #ffffff, #dbeafe);
+  color: #1d4ed8;
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  .lang-card-inner-mini {
+    padding: 14px 14px 16px;
+    border-radius: 14px;
+  }
+
+  .lang-mini-badge {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+  }
+}
+
+.clean-divider {
+  height: 40px;
+  background-color: rgb(144, 153, 179)
 }

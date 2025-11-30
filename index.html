@@ -50,15 +50,22 @@
           </h2>
           <p>Drop your code in the box and let AI do the hard work.</p>
 
-          <div class="hero-features">
-  <div class="hero-feature-single">
-    <span class="feature-title">✨ AI-Powered Code Cleanup</span>
-    <p class="feature-description">
-      Smarter optimization, instant formatting, and built-in debugging
-      all handled automatically so you can focus on building, not fixing.
-    </p>
+          <section class="lang-card-mini">
+  <div class="lang-card-inner-mini">
+    <p class="lang-mini-eyebrow">SUPPORTED LANGUAGES</p>
+
+    <div class="lang-mini-badges">
+      <span class="lang-mini-badge">JavaScript</span>
+      <span class="lang-mini-badge">Python</span>
+      <span class="lang-mini-badge">C / C++</span>
+      <span class="lang-mini-badge">Java</span>
+      <span class="lang-mini-badge">HTML / CSS</span>
+      <span class="lang-mini-badge">TypeScript</span>
+      <span class="lang-mini-badge">SQL</span>
+      <span class="lang-mini-badge lang-mini-accent">+ more</span>
+    </div>
   </div>
-</div>
+</section>
 
         </div>
 
@@ -98,7 +105,11 @@
           <!-- RIGHT: output panel (read-only) -->
           <div class="hero-code-card">
             <div class="hero-code">
-              <h2>AI Cleaned Code</h2>
+              <div class="output-header">
+                <h2>Cleaned Code</h2>
+                <button id="copy-button" class="copy-button">Copy</button>
+              </div>
+
               <textarea
                 id="output"
                 class="code-box"
@@ -111,56 +122,38 @@
       </section>
 
       <!-- Logo bar/divider -->
-      <div class="logo-bar">
-        <img src="pics/ai icon.png" alt="AI">
-        <img src="pics/speed icon.png" alt="Fast">
-        <img src="pics/user friendly icon.png" alt="User Friendly">
-        <img src="pics/ai icon.png" alt="AI">
-        <img src="pics/speed icon.png" alt="Fast">
-        <img src="pics/user friendly icon.png" alt="User Friendly">
-        <img src="pics/ai icon.png" alt="AI">
-        <img src="pics/speed icon.png" alt="Fast">
-        <img src="pics/user friendly icon.png" alt="User Friendly">
-        <img src="pics/ai icon.png" alt="AI">
-        <img src="pics/speed icon.png" alt="Fast">
-        <img src="pics/user friendly icon.png" alt="User Friendly">
-        <img src="pics/ai icon.png" alt="AI">
-        <img src="pics/speed icon.png" alt="Fast">
-        <img src="pics/user friendly icon.png" alt="User Friendly">
-        <img src="pics/ai icon.png" alt="AI">
-        <img src="pics/speed icon.png" alt="Fast">
-        <img src="pics/user friendly icon.png" alt="User Friendly">
-        <!-- repeat as needed -->
-      </div>
-<section class="feature2" id="features">
-  <div class="feature2-container">
+      <div class="clean-divider"></div>
+      
 
-    <!-- LEFT SIDE: big descriptive text -->
-    <div class="feature2-text">
-      <h2>Powerful AI Features Built Into CleanCode</h2>
-      <p>
-        CleanCode transforms messy code into polished, production-ready quality.
-        It intelligently optimizes, formats, and highlights issues in your code,
-        so you can focus on building instead of fixing.
-      </p>
+      <section class="feature2" id="features">
+        <div class="feature2-container">
 
-      <ul class="feature2-list">
-        <li><strong>Optimization</strong> — Improve performance and efficiency.</li>
-        <li><strong>Formatting</strong> — Enforce clean, readable structure.</li>
-        <li><strong>Debugging</strong> — Surface common issues before they break things.</li>
-      </ul>
-    </div>
+          <!-- LEFT SIDE: big descriptive text -->
+          <div class="feature2-text">
+            <h2>Powerful AI Features Built Into CleanCode</h2>
+            <p>
+              CleanCode transforms messy code into polished, production-ready quality.
+              It intelligently optimizes, formats, and highlights issues in your code,
+              so you can focus on building instead of fixing.
+            </p>
 
-    <div class="feature2-visual feature2-visual-code">
-  <div class="code-window">
-    <div class="code-window-header">
-      <span class="dot dot-red"></span>
-      <span class="dot dot-yellow"></span>
-      <span class="dot dot-green"></span>
-      <span class="code-window-title">cleancode_features.md</span>
-    </div>
+            <ul class="feature2-list">
+              <li><strong>Optimization</strong> — Improve performance and efficiency.</li>
+              <li><strong>Formatting</strong> — Enforce clean, readable structure.</li>
+              <li><strong>Debugging</strong> — Surface common issues before they break things.</li>
+            </ul>
+          </div>
 
-    <pre class="code-window-body"><code>
+          <div class="feature2-visual feature2-visual-code">
+            <div class="code-window">
+              <div class="code-window-header">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+                <span class="code-window-title">cleancode_features.md</span>
+              </div>
+
+              <pre class="code-window-body"><code>
 # CleanCode Features
 
 • Optimizes structure  
@@ -169,13 +162,13 @@
 • Improves readability  
 
 Simple tools. Better code.
-    </code></pre>
-  </div>
-</div>
+              </code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="clean-divider"></div>
 
-    
-  </div>
-</section>
       <!-- Before/After screenshot section -->
       <section class="before-after">
         <h2 class="section-title">See the Difference</h2>
@@ -201,11 +194,9 @@ Simple tools. Better code.
           </div>
         </div>
       </section>
+      <div class="clean-divider"></div>
 
       <!--Feature Description-->
-      
-
-
       <!-- Why Choose Section -->
       <section class="why-choose">
         <h2 class="section-title">

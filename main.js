@@ -58,3 +58,21 @@ form.addEventListener("submit", async (event) => {
     button.textContent = originalText;
   }
 });
+
+// COPY BUTTON
+const copyBtn = document.getElementById("copy-button");
+
+copyBtn.addEventListener("click", () => {
+  const text = output.value;
+
+  navigator.clipboard.writeText(text)
+    .then(() => {
+      copyBtn.textContent = "Copied!";
+      setTimeout(() => (copyBtn.textContent = "Copy"), 1200);
+    })
+    .catch(() => {
+      copyBtn.textContent = "Failed";
+      setTimeout(() => (copyBtn.textContent = "Copy"), 1200);
+    });
+});
+
